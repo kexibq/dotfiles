@@ -1,0 +1,68 @@
+borderwidth 2 
+color inactiveborder "#222222"
+color activeborder "#444444"
+# commands
+command shell urxvtc
+command fox firefox
+command tmux urxvtc -e tmux
+
+
+gap 36 16 10 10
+moveamount 2
+snapdist 0
+
+# groups
+autogroup 1 "urxvt,URxvt"
+autogroup 2 "Navigator,Firefox"
+autogroup 2 "Navigator,Aurora"
+autogroup 2 "netsurf,Netsurf"
+autogroup 2 "xombrero,Xombrero"
+autogroup 2 "chrome,Chrome"
+autogroup 3 "Pidgin,Pidgin"
+autogroup 3 "mplayer,MPlayer"
+autogroup 4 "gimp,Gimp"
+autogroup 5 "gvim,Gvim"
+autogroup 5 "xterm,Devel"
+autogroup 6 "xterm,XTermSSH"
+#autogroup 9 "sysinfo"
+
+ignore "xstatbar"
+ignore xclock
+ignore xload
+
+# keys
+bind CM-Return "urxvtc"
+bind M-u htile
+bind M-v vtile
+#bind M-s stile
+bind M-1 unmap
+bind M-2 unmap
+bind M-3 unmap
+bind M-4 unmap
+bind M-5 unmap
+bind M-6 unmap
+bind M-7 unmap
+bind M-8 unmap
+bind M-l lock
+bind M-p exec
+bind M-C delete
+bind M-m maximize
+bind 4-Up maximize
+bind 4-Down hide
+bind M-equal bigresizedown
+bind M-minus bigresizeup
+bind M-plus bigresizeright
+bind M-underscore bigresizeleft
+
+bind M-P menusearch
+bind MS-1 movetogroup1
+bind MS-e movetogroup5
+
+#bind XF86AudioPlay "mocp -G"
+bind CMS-Return "urxvtc -geometry 110x30 -e tmux"
+
+# mouse
+mousebind M-2   window_lower
+mousebind M-3   window_resize
+#mousebind "1"          window_raise
+
